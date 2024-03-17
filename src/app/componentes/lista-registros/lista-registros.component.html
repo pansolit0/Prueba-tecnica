@@ -1,0 +1,36 @@
+<div class="container mt-4 card bg-light border border-danger">
+  <h2 class="card card-title card-header mt-3 text-center">Registros de Pokémones Atrapados</h2>
+  <br>
+  <table class="table card-body mx-auto rounded">
+    <thead>
+      <tr>
+        <th scope="col" class="bg-warning bg-light border border-danger rounded">#</th>
+        <th scope="col" class="bg-warning bg-light border border-danger rounded">Nombre</th>
+        <th scope="col" class="bg-warning bg-light border border-danger rounded">Apodo</th>
+        <th scope="col" class="bg-warning bg-light border border-danger rounded">Fecha Atrapado</th>
+        <th scope="col" class="bg-warning bg-light border border-danger rounded">Cantidad</th>
+        <th scope="col" class="bg-warning bg-light border border-danger rounded">Rareza</th>
+        <th scope="col" class="bg-warning bg-light border border-danger rounded">Legendario</th>
+        <th scope="col" class="bg-warning bg-light border border-danger rounded">Descripción</th>
+        <th scope="col" class="bg-warning bg-light border border-danger rounded">Acción</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-warning bg-light border border-danger rounded" *ngFor="let registro of registrosAtrapados; let i = index">
+        <th class="bg-warning bg-light border border-danger rounded" scope="row">{{ i + 1 }}</th>
+        <td class="bg-warning bg-light border border-danger rounded">{{ registro.nombre }}</td>
+        <td class="bg-warning bg-light border border-danger rounded">{{ registro.apodo }}</td>
+        <td class="bg-warning bg-light border border-danger rounded">{{ registro.fechaAtrapado | date: 'dd-MM-yyyy' }}</td>
+        <td class="bg-warning bg-light border border-danger rounded">{{ registro.cantidad }}</td>
+        <td class="bg-warning bg-light border border-danger rounded">{{ registro.rareza }}</td>
+        <td class="bg-warning bg-light border border-danger rounded">{{ registro.esLegendario ? 'Sí' : 'No' }}</td>
+        <td class="bg-warning bg-light border border-danger rounded">{{ registro.descripcion }}</td>
+        <td class="bg-warning bg-light border border-danger rounded">
+          <button class="btn btn-primary mx-2 m-1 btn-sm" (click)="cargarRegistro(registro)">🖉</button>
+          <button class="btn btn-danger mx-2 m-1 btn-sm" (click)="eliminarRegistro(registro)">🗑️</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,9 @@
+<div class="container mt-4 row bg-light border border-danger rounded">
+  <h2 class="card  card-title card-header mt-3 text-center " >Pokemones salvajes</h2>
+  <div *ngFor="let pokemon of pokemonLista" class="mb-2 col-2 card-body mx-auto bg-light border border-danger rounded card-body  ">
+    <div class="d-flex justify-content-between align-items-center  m-1 p-1">
+      <span class="">{{ pokemon.nombre }} ({{ pokemon.esLegendario ? 'Legendario' : 'No Legendario' }})</span>
+      <button class="btn btn-danger m-1 p-1" (click)="atraparPokemon(pokemon)">Atrapar</button>
+    </div>
+  </div>
+</div>
