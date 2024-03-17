@@ -1,7 +1,6 @@
-import { RouterModule, Routes } from '@angular/router';
+import {  Routes } from '@angular/router';
 
 import { FormularioRegistroComponent } from './componentes/formulario-registro/formulario-registro.component';
-import { NgModule } from '@angular/core';
 import { IndexComponent } from './paginas/index/index.component';
 
 export const routes: Routes = [

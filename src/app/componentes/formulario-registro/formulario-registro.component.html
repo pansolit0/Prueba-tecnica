@@ -1,27 +1,29 @@
 <div class="container mt-4 card bg-light border border-danger rounded">
-  <h2 class="card card-title card-header mt-3 text-center">{{ tituloFormulario }}</h2>
-
-    <form [formGroup]="registroForm" (ngSubmit)="onSubmit()" class="form-group border">
-      <div class="mb-3">
-        <br>
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" id="nombre" class="form-control" formControlName="nombre" placeholder="Nombre del Pokémon" readonly>
-      </div>
-      <div class="mb-3">
-        <label for="apodo" class="form-label">Apodo</label>
-        <input type="text" id="apodo" class="form-control" formControlName="apodo" placeholder="Apodo del Pokémon">
-      </div>
+  <h2 class="card-title card-header mt-3 text-center card">{{ tituloFormulario }}</h2>
+  <form [formGroup]="registroForm" (ngSubmit)="onSubmit()" class="form-group border p-2">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" id="nombre" class="form-control" formControlName="nombre" placeholder="Nombre del Pokémon" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="apodo" class="form-label">Apodo</label>
+      <input type="text" id="apodo" class="form-control" formControlName="apodo" placeholder="Apodo del Pokémon">
+    </div>
     <div class="mb-3">
       <label for="fechaAtrapado" class="form-label">Fecha Atrapado</label>
       <input type="date" id="fechaAtrapado" class="form-control" formControlName="fechaAtrapado">
     </div>
     <div class="mb-3">
-      <label for="descripcion" class="form-label" >descripción</label>
+      <label for="descripcion" class="form-label">descripción</label>
       <input type="text" id="descripcion" placeholder="200 caracteres maximo" class="form-control" formControlName="descripcion">
     </div>
     <div class="mb-3">
       <label for="cantidad" class="form-label">Cantidad atrapada</label>
       <input type="number" id="cantidad" class="form-control" formControlName="cantidad">
+    </div>
+    <div class="mb-3">
+      <label for="rareza" class="form-label">Rareza</label>
+      <input type="number" id="rareza" class="form-control" formControlName="rareza">
     </div>
     <div class="mb-3">
       <label class="form-label">Es Legendario</label>
@@ -34,13 +36,10 @@
         <label class="form-check-label" for="legendarioNo">No</label>
       </div>
     </div>
-    <div class="mb-3">
-      <label for="rareza" class="form-label">Rareza</label>
-      <input type="number" id="rareza" class="form-control" formControlName="rareza">
+    <div class="d-grid gap-2">
+      <button *ngIf="!modoEdicion" type="submit" class="btn btn-primary">Crear Registro</button>
+      <button *ngIf="modoEdicion" type="button" class="btn btn-success" (click)="actualizarRegistro()">Actualizar Registro</button>
     </div>
-    <button type="submit" class="btn btn-primary">Crear Registro</button>
-    <button *ngIf="modoEdicion" type="button" class="btn btn-success" (click)="actualizarRegistro()">Actualizar Registro</button>
-    <br>
     <br>
   </form>
 </div>
