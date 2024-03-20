@@ -1,1 +1,70 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+:root {
+  --grad1: #F2B705;
+  --grad2: #BF9004;
+  --grad3: #d30000;
+  --grad4: #bf3004;
+  --grad5: #3C5FA6;
+  --grad6: #1F4373;
+  --gradbg1:#F2F2F2;
+  --gradbg2:#e2e2e2;
+  --light-gray: #f5f5f5; /* Nuevo color para el fondo del formulario */
+
+}
+
+body {
+  background-image: url('../src/assets/img/fondo.jpg');
+  width: 100%;
+  max-width: 100%;
+  background-position: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+.container {
+  background-image: linear-gradient(to bottom right, var(--grad1), var(--grad2));
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  color: #fff; /* Cambiar el color del texto a blanco para que coincida con el diseño */
+  padding: 30px;
+  margin-top: 50px; /* Ajustar el margen superior para centrar */
+}
+
+h2 {
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+.form-control {
+  border-radius: 3px;
+  margin-bottom: 15px; /* Espacio entre los controles de formulario */
+  background-color: rgba(255, 255, 255, 0.7); /* Hacer los campos de formulario ligeramente transparentes */
+  border: none;
+}
+
+.btn-primary{
+  background-image: linear-gradient(to bottom right, var(--grad5), var(--grad6));
+  border: none;
+  color: #fff;
+}
+
+.btn-warning, .border-warning {
+  background-image: linear-gradient(to bottom right, var(--grad1), var(--grad2));
+  border: none;
+  color: #fff;
+}
+
+
+.btn-info {
+  background-image: linear-gradient(to bottom right, var(--grad5), var(--grad6));
+  border: none;
+  color: #fff;
+}
+
+.form-label, .form-check-label {
+  color: var(--light-gray);
+}
+
+
+

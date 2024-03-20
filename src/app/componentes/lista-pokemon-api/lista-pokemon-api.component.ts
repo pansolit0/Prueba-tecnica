@@ -5,6 +5,7 @@ import { Registro } from '../../models/registro.model';
 
 import { PokeapiService } from '../../servicios/poke-api.service';
 import { PokemonSeleccionadoService } from '../../servicios/pokemon-seleccionado.service';
+import { env } from '../../env/env';
 
 
 
@@ -29,7 +30,10 @@ export class ListaPokemonComponent implements OnInit {
 
   obtenerListaPokemon(): void {
     this.servicioPokeapi.obtenerPokemonLista(30).subscribe(pokemon => {
-      this.pokemonLista = pokemon;
+      this.pokemonLista = pokemon.map(p => ({
+        ...p,
+        sprite: `${env.apiSpritesPokemon}/${p.id}.png`
+      }));
     });
   }
 

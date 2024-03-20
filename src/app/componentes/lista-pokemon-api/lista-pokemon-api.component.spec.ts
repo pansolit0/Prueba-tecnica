@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListaPokemonApiComponent } from './lista-pokemon-api.component';
+import { ListaPokemonComponent } from './lista-pokemon-api.component';
 
 describe('ListaPokemonApiComponent', () => {
-  let component: ListaPokemonApiComponent;
-  let fixture: ComponentFixture<ListaPokemonApiComponent>;
+  let component: ListaPokemonComponent;
+  let fixture: ComponentFixture<ListaPokemonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ListaPokemonApiComponent]
+      imports: [ListaPokemonComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(ListaPokemonApiComponent);
+
+    fixture = TestBed.createComponent(ListaPokemonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

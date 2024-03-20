@@ -1,9 +1,15 @@
 <div class="container mt-4 row bg-light border border-danger rounded">
-  <h2 class="card-title card-header mt-3 text-center card" >Pokemones salvajes</h2>
-  <div *ngFor="let pokemon of pokemonLista" class="mb-2 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 card-body border bg-light bg-gradient border-danger rounded">
-    <div class="d-flex justify-content-between align-items-center m-1 p-1">
-      <span>{{ pokemon.nombre }} ({{ pokemon.esLegendario ? 'Legendario' : 'No Legendario' }})</span>
-      <button class="btn btn-danger m-1 p-1" (click)="atraparPokemon(pokemon)">Atrapar</button>
+  <h2 class="card-title card-header mt-3 text-center card">Pokemones salvajes</h2>
+  <div *ngFor="let pokemon of pokemonLista" class="mb-2 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 card-body">
+    <div class="fw-bold bg-warning bg-gradient border border-warning card-body rounded">
+      <div class="d-flex flex-column align-items-center m-1 p-1">
+        <!-- Imagen del Pokémon -->
+        <img [src]="pokemon.sprite" class="img-fluid" alt="{{ pokemon.nombre }}">
+        <div class="d-flex justify-content-between align-items-center w-100 mt-2">
+          <span class="text-dark fw-bold">{{ pokemon.nombre }} ({{ pokemon.esLegendario ? 'Legendario' : 'No Legendario' }})</span>
+          <button class="btn btn-info border border-primary m-1 p-1 text-white" (click)="atraparPokemon(pokemon)">Atrapar</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

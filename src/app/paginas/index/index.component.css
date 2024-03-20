@@ -1,0 +1,3 @@
+.bg1{
+  background-image: linear-gradient(to bottom , var(--gradbg1), var(--gradbg1),var(--gradbg1),var(--gradbg2));
+}

@@ -1,9 +1,10 @@
-<div class="container mt-4 card bg-light border border-danger rounded">
-  <h2 class="card-title card-header mt-3 text-center card">Registros de Pokémones Atrapados</h2>
-  <div class="table-responsive ">
-    <table class="table mx-auto rounded form-group border ">
-      <thead>
-        <tr class="bg-warning border-bottom border-secondary">
+
+<div class="container mt-4 bg-light border border-danger rounded shadow">
+  <h2 class="text-center mt-3 card-title card-header card">Registros de Pokémones Atrapados</h2>
+  <div class="table-responsive">
+    <table class="table mx-auto rounded">
+      <thead class="bg-warning border-bottom border-secondary">
+        <tr class="border border-warning">
           <th scope="col">#</th>
           <th scope="col">Nombre</th>
           <th scope="col">Apodo</th>
@@ -26,8 +27,8 @@
           <td>{{ registro.esLegendario ? 'Sí' : 'No' }}</td>
           <td>{{ registro.descripcion }}</td>
           <td>
-            <button class="btn btn-primary m-1 btn-sm" (click)="cargarRegistro(registro)">Editar</button>
-            <button class="btn btn-danger m-1 btn-sm" (click)="eliminarRegistro(registro)">Borrar</button>
+            <button class="btn btn-warning m-1 btn-sm text-white" (click)="cargarRegistro(registro)">Editar</button>
+            <button class="btn btn-danger m-1 btn-sm text-white" (click)="eliminarRegistro(registro)">Borrar</button>
           </td>
         </tr>
       </tbody>
